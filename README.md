@@ -1,8 +1,8 @@
 # ngSpotify
 
-You can look at the README.md from the `1_master` branch to see the first step.
+One thing I noticed about the way the structure goes is that the compiled *.js files go everywhere.  This wouldn't work if you were trying to serve it from the backend.  You would have to get it into a ./dist folder somehow.
 
-In this step, a service was added to call spotify. There is an input on the search component, so the FormModule had to be imported.  Since the spotify service needed http, HttpModule had to be imported.  To allow the search component to get at the service it had to be imported to app.component.ts and added to the Providers array.
+In this step, an Artist model and an Album model were added.  This simply helps define the data structure coming back from spotify.  In the search component html looping to display the data was done.  There is a a routerLink in the search html which is not going to work yet.
 
 The file structure looks like this:
 ```
@@ -19,8 +19,11 @@ The file structure looks like this:
 |   |   |-- navbar.component.html
 |   |   `-- navbar.component.ts
 |   `-- search
-|       |-- search.component.js.map
+|       |-- search.component.html
 |       `-- search.component.ts
+|-- models
+|   |-- Album.ts
+|   `-- Artist.ts
 `-- services
     `-- spotify.service.ts
 ```
