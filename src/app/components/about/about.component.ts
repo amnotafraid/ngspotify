@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   moduleId: module.id,
-  selector: 'about',
+  selector: 'artist',
   templateUrl: 'about.component.html',
 })
-export class AboutComponent  { }
+export class AboutComponent { }
 

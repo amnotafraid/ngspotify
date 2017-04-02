@@ -1,8 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SearchComponent } from './components/search/search.component';
 import { AboutComponent } from './components/about/about.component';
+import { ArtistComponent } from './components/artist/artist.component';
+import { SearchComponent } from './components/search/search.component';
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,9 @@ const appRoutes: Routes = [
   },{
     path: 'about',
     component: AboutComponent
+  },{
+    path: 'artist/:id',
+    component: ArtistComponent
   }
 ];
 

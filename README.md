@@ -1,8 +1,19 @@
 # ngSpotify
 
-One thing I noticed about the way the structure goes is that the compiled *.js files go everywhere.  This wouldn't work if you were trying to serve it from the backend.  You would have to get it into a ./dist folder somehow.
+In this branch the routing is created and the artist component, which is like a detail for a master.
 
-In this step, an Artist model and an Album model were added.  This simply helps define the data structure coming back from spotify.  In the search component html looping to display the data was done.  There is a a routerLink in the search html which is not going to work yet.
+* For the routing, please see app.routing.ts. You have to:
+  * Make the routing mapper
+  * You can use it in a method as in the artist component
+  * In app.component.html, you must add:
+```
+        <router-outlet></router-outlet>
+```
+* There is a new component:  components/artist/artist.component.ts
+* It uses ActivatedRoute in the artist component.
+* The 'angular life-cycle' -- What's that?  You can start by researching the OnInit method.
+* If you want to know how to do a circle in Bootstrap, checkout the html for artist.
+* It uses a little bit more of the spotify Api.  See the service.
 
 The file structure looks like this:
 ```
@@ -15,6 +26,9 @@ The file structure looks like this:
 |   |-- about
 |   |   |-- about.component.html
 |   |   `-- about.component.ts
+|   |-- artist
+|   |   |-- artist.componenent.js
+|   |   `-- artist.component.html
 |   |-- navbar
 |   |   |-- navbar.component.html
 |   |   `-- navbar.component.ts
@@ -22,7 +36,7 @@ The file structure looks like this:
 |       |-- search.component.html
 |       `-- search.component.ts
 |-- models
-|   |-- Album.ts
+|   |-- Album.js
 |   `-- Artist.ts
 `-- services
     `-- spotify.service.ts
